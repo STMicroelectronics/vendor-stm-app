@@ -4,7 +4,7 @@ This module contains the STMicroelectronics applications associated if required 
 
 It is part of the STMicroelectronics Android delivery (see the [delivery][] for more information).
 
-[delivery]: https://wiki.st.com/stm32mpu/wiki/STM32MP15_distribution_for_Android_release_note_-_v1.0.0
+[delivery]: https://wiki.st.com/stm32mpu/wiki/STM32MP15_distribution_for_Android_release_note_-_v1.1.0
 
 ## Description ##
 
@@ -17,7 +17,7 @@ Please see the Android delivery release notes for more details.
 * The [release notes][] document the information on the release.
 * The [distribution package][] provides detailed information on how to use this delivery.
 
-[release notes]: https://wiki.st.com/stm32mpu/wiki/STM32MP15_distribution_for_Android_release_note_-_v1.0.0
+[release notes]: https://wiki.st.com/stm32mpu/wiki/STM32MP15_distribution_for_Android_release_note_-_v1.1.0
 [distribution package]: https://wiki.st.com/stm32mpu/wiki/STM32MP1_Distribution_Package_for_Android
 
 ## Dependencies ##
@@ -34,11 +34,13 @@ This module contains application packages and their associated coprocessor firmw
 **Applications:**
 * `STCoproM4Echo.apk`: coprocessor service example (echo use case)
 * `STCoproM4Example.apk`: coprocessor service example (ADC/DAC use case + several resources usage)
-* `STCamera.apk`: basic camera application
-* `STVideo.apk`: basic video application
+* `STCamera.apk`: simple camera application
+* `STVideo.apk`: simple video application
+* `STAudio.apk`: simple audio application
+* `STLauncher.apk`: simple launcher application
 * `STPerf.apk`: performance view overlay
 
-**Firmwares (in ./firmwares/):**
+**Firmwares (in ./firmwares/eval):**
 * `OpenAMP_TTY_echo.elf`: firmware binary associated to STCoproM4Echo application
 * `copro_m4example.elf`: firmware binary used associated to STCoproM4Example application
 
