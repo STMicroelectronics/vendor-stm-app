@@ -16,36 +16,8 @@
 # Install the prebuilt ST apk
 LOCAL_PATH := $(call my-dir)
 
-# ST Copro M4 Echo prebuilt application
-# Sources available in gerrit : android-brillo-mpu/app_stcoprom4echo
-include $(CLEAR_VARS)
-
-LOCAL_MODULE := STCoproM4Echo
-LOCAL_SRC_FILES := $(LOCAL_MODULE).apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
-LOCAL_MODULE_TAGS := optional
-LOCAL_CERTIFICATE := platform
-LOCAL_PRODUCT_MODULE := true
-
-include $(BUILD_PREBUILT)
-
-# ST Copro M4 Example prebuilt application
-# Sources available in gerrit : android-brillo-mpu/app_stcoprom4example
-include $(CLEAR_VARS)
-
-LOCAL_MODULE := STCoproM4Example
-LOCAL_SRC_FILES := $(LOCAL_MODULE).apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
-LOCAL_MODULE_TAGS := optional
-LOCAL_CERTIFICATE := platform
-LOCAL_PRODUCT_MODULE := true
-
-include $(BUILD_PREBUILT)
-
 # ST Perf view prebuilt application
-# Sources available in gerrit : android-brillo-mpu/app_stperf
+# Sources available in github : app_stperf
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := STPerf
@@ -54,12 +26,13 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_MODULE_TAGS := optional
 LOCAL_CERTIFICATE := platform
+LOCAL_OPTIONAL_USES_LIBRARIES := androidx.window.extensions androidx.window.sidecar
 LOCAL_PRODUCT_MODULE := true
 
 include $(BUILD_PREBUILT)
 
 # ST Video application
-# Sources available in gerrit : android-brillo-mpu/app_stvideo
+# Sources available in github : app_stvideo
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := STVideo
@@ -68,40 +41,13 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_MODULE_TAGS := optional
 LOCAL_CERTIFICATE := platform
-LOCAL_PRODUCT_MODULE := true
-
-include $(BUILD_PREBUILT)
-
-# ST Camera prebuilt application
-# Sources available in gerrit : android-brillo-mpu/app_stcamera
-include $(CLEAR_VARS)
-
-LOCAL_MODULE := STCamera
-LOCAL_SRC_FILES := $(LOCAL_MODULE).apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
-LOCAL_MODULE_TAGS := optional
-LOCAL_CERTIFICATE := platform
-LOCAL_SYSTEM_EXT_MODULE := true
-
-include $(BUILD_PREBUILT)
-
-# ST Audio prebuilt application
-# Sources available in gerrit : android-brillo-mpu/app_staudio
-include $(CLEAR_VARS)
-
-LOCAL_MODULE := STAudio
-LOCAL_SRC_FILES := $(LOCAL_MODULE).apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
-LOCAL_MODULE_TAGS := optional
-LOCAL_CERTIFICATE := platform
+LOCAL_OPTIONAL_USES_LIBRARIES := androidx.window.extensions androidx.window.sidecar
 LOCAL_PRODUCT_MODULE := true
 
 include $(BUILD_PREBUILT)
 
 # ST Graphics prebuilt application
-# Sources available in gerrit : android-brillo-mpu/app_stgraphics
+# Sources available in github : app_stgraphics
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := STGraphics
@@ -115,7 +61,7 @@ LOCAL_SYSTEM_EXT_MODULE := true
 include $(BUILD_PREBUILT)
 
 # ST App Launcher
-# Sources available in gerrit : android-brillo-mpu/app_stlauncher
+# Sources available in github : app_stlauncher
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := STLauncher
